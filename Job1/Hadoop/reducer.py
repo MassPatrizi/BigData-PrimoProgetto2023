@@ -93,7 +93,7 @@ for year, ProductId, word, count in output_data_sorted:
                 products_per_year = 0
                 continue
 
-            # Stampa i ProductId mancanti per l'anno corrente
+            # Stampa i ProductId mancanti per l'anno corrente   !NON CREDO SERVA!
             missing_ProductIds = max_products_per_year - products_per_year
             for ProductId, count in rows_per_year.items():
                 if missing_ProductIds == 0:
