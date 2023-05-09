@@ -72,8 +72,48 @@ output_data_sorted = sorted(output_data, key=lambda x: x[0])
 
 # Print the final output
 previous_year = None
+rows_per_year = {}  # Dizionario per tenere traccia delle righe per ogni ProductId nell'anno corrente
+max_rows_per_year = 50  # Numero massimo di righe per anno
+max_rows_per_ProductId = 5  # Numero massimo di righe per ogni ProductId
+max_products_per_year = 10
+products_per_year = 0
+
 for year, ProductId, word, count in output_data_sorted:
     if year != previous_year:
+        if previous_year is not None:
+            # Verifica se abbiamo raggiunto il numero massimo di righe per l'anno corrente
+            if sum(rows_per_year.values()) >= max_rows_per_year:
+                rows_per_year = {}
+                products_per_year = 0
+                continue
+
+            # Verifica se abbiamo raggiunto il numero massimo di ProductId distinti per l'anno corrente
+            if products_per_year >= max_products_per_year:
+                rows_per_year = {}
+                products_per_year = 0
+                continue
+
+            # Stampa i ProductId mancanti per l'anno corrente
+            missing_ProductIds = max_products_per_year - products_per_year
+            for ProductId, count in rows_per_year.items():
+                if missing_ProductIds == 0:
+                    continue
+                if count < max_rows_per_ProductId:
+                    print(f'\t{ProductId}\tMissing\t0')
+                    missing_ProductIds -= 1
+        
         print(f'{year}:')
         previous_year = year
-    print(f'\t{ProductId}\t{word}\t{count}')
+        rows_per_year = {}  # Reset del conteggio delle righe per l'anno corrente
+        products_per_year = 0
+    
+    if ProductId not in rows_per_year and products_per_year < max_products_per_year:
+        products_per_year += 1
+        rows_per_year[ProductId] = 1
+        print(f'\t{ProductId}\t{word}\t{count}')
+    elif ProductId in rows_per_year and rows_per_year[ProductId] < max_rows_per_ProductId:
+        rows_per_year[ProductId] += 1
+        print(f'\t{ProductId}\t{word}\t\t{count}')
+
+
+

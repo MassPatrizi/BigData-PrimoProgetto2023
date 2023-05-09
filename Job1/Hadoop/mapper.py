@@ -16,18 +16,21 @@ def extract_year_from_unix_time(unix_time):
         return None
 
 for row in sys.stdin:
-    #row = next(csv.reader([line]))
     row = row.strip().split(',')
-    
-    if 'Id,ProductId,' in row:
+
+    # Ignora la riga di intestazione
+    if row[0] == 'Id':
         continue
 
     # Estrarre i dati delle recensioni
-    if len(row)==10:
-        _, ProductId, _, _, _, _, _, Time, _, Text = row
+    if len(row) >= 10:
+        ProductId = row[1]
+        Time = row[7]
+        Text = row[9]
 
-    # Estrarre l'anno dalla data
-    year = extract_year_from_unix_time(Time)
+        # Estrarre l'anno dalla data
+        year = extract_year_from_unix_time(Time)
 
-    print(f'{ProductId}\t{year}\t{Text}')
+        print(f'{ProductId}\t{year}\t{Text}')
+
 
