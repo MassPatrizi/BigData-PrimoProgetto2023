@@ -12,12 +12,14 @@ current_year = None
 current_product_counts = {}
 current_product_words = {}
 
-def emit_top_words(product_id, words):
+def emit_top_words(product_id, words, year):
     # Emitting the top words for a given product
     top_words = heapq.nlargest(TOP_WORDS_PER_PRODUCT, words, key=lambda k: words[k])
     for word in top_words:
         count = words[word]
-        print(f'{product_id}\t{word}\t{count}')
+        output_data.append((year, product_id, word, count))
+
+output_data = []  # List to store the (year, product, word, count) tuples
 
 for line in sys.stdin:
     # Parsing the input line
@@ -36,7 +38,7 @@ for line in sys.stdin:
         if current_year is not None:
             for ProductId in current_product_counts:
                 product_counts = current_product_counts[ProductId]
-                emit_top_words(ProductId, product_counts)
+                emit_top_words(ProductId, product_counts, current_year)
 
         # Reset the variables for the new year
         current_year = year
@@ -51,10 +53,27 @@ for line in sys.stdin:
                 product_counts[word] = product_counts.get(word, 0) + 1
     else:
         current_product_counts[ProductId] = {}
-        current_product_words[ProductId] = set()
+        current_product_words[ProductId] = {}
+
+    # Update the (word, count) tuple for the current product
+    product_words = current_product_words[ProductId]
+    for word in Text.split():
+        if len(word) >= 4:
+            product_words[word] = product_words.get(word, 0) + 1
 
 # Emitting the result for the last year
 if current_year is not None:
     for ProductId in current_product_counts:
         product_counts = current_product_counts[ProductId]
-        emit_top_words(ProductId, product_counts)
+        emit_top_words(ProductId, product_counts, current_year)
+
+# Sorting the output_data by year
+output_data_sorted = sorted(output_data, key=lambda x: x[0])
+
+# Print the final output
+previous_year = None
+for year, ProductId, word, count in output_data_sorted:
+    if year != previous_year:
+        print(f'{year}:')
+        previous_year = year
+    print(f'\t{ProductId}\t{word}\t{count}')
