@@ -60,6 +60,8 @@ for line in sys.stdin:
     for word in Text.split():
         if len(word) >= 4:
             product_words[word] = product_words.get(word, 0) + 1
+            current_product_counts[ProductId][word] = current_product_counts[ProductId].get(word, 0) + 1
+
 
 # Emitting the result for the last year
 if current_year is not None:
@@ -114,6 +116,4 @@ for year, ProductId, word, count in output_data_sorted:
     elif ProductId in rows_per_year and rows_per_year[ProductId] < max_rows_per_ProductId:
         rows_per_year[ProductId] += 1
         print(f'\t{ProductId}\t{word}\t\t{count}')
-
-
-
+        
