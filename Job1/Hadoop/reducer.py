@@ -94,15 +94,6 @@ for year, ProductId, word, count in output_data_sorted:
                 rows_per_year = {}
                 products_per_year = 0
                 continue
-
-            # Stampa i ProductId mancanti per l'anno corrente   !NON CREDO SERVA!
-            missing_ProductIds = max_products_per_year - products_per_year
-            for ProductId, count in rows_per_year.items():
-                if missing_ProductIds == 0:
-                    continue
-                if count < max_rows_per_ProductId:
-                    print(f'\t{ProductId}\tMissing\t0')
-                    missing_ProductIds -= 1
         
         print(f'{year}:')
         previous_year = year
