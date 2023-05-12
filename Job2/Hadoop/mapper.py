@@ -2,7 +2,6 @@
 
 """mapper.py"""
 import sys
-import datetime
 
 for row in sys.stdin:
     row = row.strip().split(',')
