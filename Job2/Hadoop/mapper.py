@@ -13,7 +13,11 @@ for row in sys.stdin:
     # Solo se row è di almeno 10 campi, printa userId, Numerator e Denominator
     if len(row) >= 10:
         userId = row[2]
-        helpfulnessNumerator = row[4]
-        helpfulnessDenominator = row[5]
+        
+        try:
+            helpfulnessNumerator = int(row[4])
+            helpfulnessDenominator = int(row[5])
+        except ValueError:
+            continue
 
         print(f'{userId}\t{helpfulnessNumerator}\t{helpfulnessDenominator}')
