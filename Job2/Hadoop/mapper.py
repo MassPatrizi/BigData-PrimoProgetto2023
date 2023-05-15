@@ -4,7 +4,7 @@
 import sys
 
 for row in sys.stdin:
-    row = row.strip().split(',')
+    row = row.strip().split(';')
 
     # Ignora la riga di intestazione
     if row[0] == 'Id':

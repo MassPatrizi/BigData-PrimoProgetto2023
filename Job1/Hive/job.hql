@@ -21,7 +21,7 @@ TBLPROPERTIES("skip.header.line.count"="1");
 
 -- Caricamento dei dati nella tabella reviews
 --LOAD DATA LOCAL INPATH 'BigData/Job1/Reviews.csv' INTO TABLE reviews;
-LOAD DATA LOCAL INPATH 'Desktop/ReviewsFTD.csv' INTO TABLE reviews;
+LOAD DATA LOCAL INPATH 'Desktop/ReviewsCleaned.csv' INTO TABLE reviews;
 
 
 -- Generazione dei risultati per ciascun anno
