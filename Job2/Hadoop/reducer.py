@@ -43,7 +43,7 @@ for userId in userId_utilities_dictionary.keys():
     userId_appreciation_dictionary[userId] = sum(userId_utilities_dictionary[userId]) / len(userId_utilities_dictionary[userId])
 
 # ordina il dizionario in base al value
-sorted_dict = dict(sorted(userId_appreciation_dictionary.items(), key=lambda x: x[1]))
+sorted_dict = dict(sorted(userId_appreciation_dictionary.items(), key=lambda x: -x[1]))
 
 # print the output
 for userId in sorted_dict.keys():
