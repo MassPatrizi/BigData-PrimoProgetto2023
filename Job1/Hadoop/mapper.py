@@ -16,7 +16,7 @@ def extract_year_from_unix_time(unix_time):
         return None
 
 for row in sys.stdin:
-    row = row.strip().split(',')
+    row = row.strip().split(';')
 
     # Ignora la riga di intestazione
     if row[0] == 'Id':
