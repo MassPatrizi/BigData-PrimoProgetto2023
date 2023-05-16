@@ -78,11 +78,18 @@ tw AS (
     ) word_counts
 )
 SELECT
-    tp.year,
+    'year' AS year,
+    'productid' AS productid,
+    'review_count' AS review_count,
+    'word' AS word,
+    'word_count' AS word_count
+UNION ALL
+SELECT
+    CAST(tp.year AS STRING) AS year,
     tp.productid,
-    tp.review_count,
+    CAST(tp.review_count AS STRING) AS review_count,
     tw.cleaned_word AS word,
-    tw.word_count
+    CAST(tw.word_count AS STRING) AS word_count
 FROM
     top_10_products tp
 JOIN 
