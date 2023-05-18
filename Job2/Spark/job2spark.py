@@ -18,11 +18,15 @@ spark = SparkSession.builder.appName("ReviewsAnalysisJob2").getOrCreate()
 # Use the Spark session to create RDD from the input data
 input_RDD = spark.sparkContext.textFile(input_filepath).cache()
 
+# remove header
+header = input_RDD.first()
+input_RDD = input_RDD.filter(f=lambda line: line != header)
+
 # Run transformations asking them directly to the RDDs
 # create a RDD splitting the csv by ";"
 reviews_RDD = input_RDD.map(f=lambda line: line.strip().split(";"))
 # create an RDD mapping only uderID, Num e Den
-user_num_den_RDD = reviews_RDD.map(f=lambda line: (reviews_RDD[2], reviews_RDD[4], reviews_RDD[5]))
+user_num_den_RDD = reviews_RDD.map(f=lambda line: (line[2], line[4], line[5]))
 
 # Run the final action / actions asking them directly to the RDDs
 
