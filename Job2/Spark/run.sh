@@ -1,0 +1,1 @@
+$SPARK_HOME/bin/spark-submit --master local /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Spark/job2spark.py --input_path file:///Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/ReviewsCleaned.csv --output_path /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Spark/Output
