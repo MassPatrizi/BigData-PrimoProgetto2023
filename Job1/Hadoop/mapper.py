@@ -4,6 +4,7 @@
 import sys
 import csv
 import datetime
+import time
 
 def extract_year_from_unix_time(unix_time):
     try:
@@ -14,6 +15,8 @@ def extract_year_from_unix_time(unix_time):
     except ValueError:
         print("Invalid Unix timestamp:", unix_time)
         return None
+
+mapper_start_time = time.time()
 
 for row in sys.stdin:
     row = row.strip().split(';')
@@ -40,3 +43,5 @@ for row in sys.stdin:
         print(f'{ProductId}\t{year}\t{Text}')
 
 
+mapper_end_time = time.time()
+print(f'Mapper execution time: {mapper_end_time-mapper_start_time} secondi')

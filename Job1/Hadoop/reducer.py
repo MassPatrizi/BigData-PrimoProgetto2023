@@ -4,6 +4,9 @@
 import sys
 import heapq
 import re
+import time
+
+reducer_start_time = time.time()
 
 # Defining the number of top products and top words per product
 TOP_PRODUCTS = 10
@@ -110,3 +113,6 @@ for year, ProductId, word, count, reviews in output_data_sorted:
     elif ProductId in rows_per_year and rows_per_year[ProductId] < max_rows_per_ProductId:
         rows_per_year[ProductId] += 1
         print(f'\t{ProductId}\t{reviews}\t\t{word}\t{count}')
+
+reducer_end_time = time.time()
+print(f'Reducer end time: {reducer_end_time - reducer_start_time} secondi')
