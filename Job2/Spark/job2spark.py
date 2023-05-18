@@ -3,6 +3,13 @@
 import argparse
 from pyspark.sql import SparkSession
 
+def float_division(a, b):
+    if(b!=0):
+        result = a/b
+    else:
+        result = 0
+    return result
+
 # create parser and set its arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("--input_path", type=str, help="Input file path")
@@ -27,12 +34,13 @@ input_RDD = input_RDD.filter(f=lambda line: line != header)
 reviews_RDD = input_RDD.map(f=lambda line: line.strip().split(";"))
 # create an RDD mapping only uderID, Num e Den
 user_num_den_RDD = reviews_RDD.map(f=lambda line: (line[2], line[4], line[5]))
-
+# create and RDD mapping userID, utility
+user_utility_RDD = user_num_den_RDD.map(f=lambda line: (line[0], float_division(float(line[1]),float(line[2]))))
 # Run the final action / actions asking them directly to the RDDs
 
 
 # Write down the output
-user_num_den_RDD.saveAsTextFile(output_filepath)
+user_utility_RDD.saveAsTextFile(output_filepath)
 
 # Chiudi la sessione Spark
 spark.stop()
