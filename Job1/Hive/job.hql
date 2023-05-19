@@ -19,8 +19,10 @@ STORED AS TEXTFILE
 TBLPROPERTIES("skip.header.line.count"="1");
 
 -- Caricamento dei dati nella tabella reviews
--- LOAD DATA LOCAL INPATH 'BigData/Job1/Reviews.csv' INTO TABLE reviews;
-LOAD DATA LOCAL INPATH 'Desktop/ReviewsCleaned.csv' INTO TABLE reviews;
+--LOAD DATA LOCAL INPATH 'Desktop/ReviewsCleaned.csv' INTO TABLE reviews;
+--LOAD DATA LOCAL INPATH 'Desktop/duplicated_output.csv' INTO TABLE reviews;
+--LOAD DATA LOCAL INPATH 'Desktop/quintupled_output.csv' INTO TABLE reviews;
+LOAD DATA LOCAL INPATH 'Desktop/decupled_output.csv' INTO TABLE reviews;
 
 -- Generazione dei risultati per ciascun anno
 -- reviews_by_year seleziona tutte le ennuple prendendo year, productid e text
