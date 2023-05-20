@@ -1,0 +1,1 @@
+$HIVE_HOME/bin/hive --f /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Hive/job2.hql
