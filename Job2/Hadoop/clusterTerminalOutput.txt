@@ -1,0 +1,154 @@
+[hadoop@ip-172-31-22-71 ~]$ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -file Hadoop/mapper.py -mapper Hadoop/mapper.py -file Hadoop/reducer.py -reducer Hadoop/reducer.py -input /input/ReviewsCleaned.csv -output /output/job2output
+2023-05-21 08:11:28,228 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [Hadoop/mapper.py, Hadoop/reducer.py] [/usr/lib/hadoop/hadoop-streaming-3.3.3-amzn-2.jar] /tmp/streamjob4974939169387151837.jar tmpDir=null
+2023-05-21 08:11:29,476 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at ip-172-31-22-71.ec2.internal/172.31.22.71:8032
+2023-05-21 08:11:29,620 INFO client.AHSProxy: Connecting to Application History server at ip-172-31-22-71.ec2.internal/172.31.22.71:10200
+2023-05-21 08:11:29,659 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at ip-172-31-22-71.ec2.internal/172.31.22.71:8032
+2023-05-21 08:11:29,660 INFO client.AHSProxy: Connecting to Application History server at ip-172-31-22-71.ec2.internal/172.31.22.71:10200
+2023-05-21 08:11:29,869 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/hadoop/.staging/job_1684655349030_0001
+2023-05-21 08:11:30,577 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library
+2023-05-21 08:11:30,579 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 049362b7cf53ff5f739d6b1532457f2c6cd495e8]
+2023-05-21 08:11:30,607 INFO mapred.FileInputFormat: Total input files to process : 1
+2023-05-21 08:11:30,633 INFO net.NetworkTopology: Adding a new node: /default-rack/172.31.29.59:9866
+2023-05-21 08:11:30,665 INFO mapreduce.JobSubmitter: number of splits:12
+2023-05-21 08:11:30,796 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1684655349030_0001
+2023-05-21 08:11:30,796 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2023-05-21 08:11:31,006 INFO conf.Configuration: resource-types.xml not found
+2023-05-21 08:11:31,006 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-05-21 08:11:31,762 INFO impl.YarnClientImpl: Submitted application application_1684655349030_0001
+2023-05-21 08:11:31,821 INFO mapreduce.Job: The url to track the job: http://ip-172-31-22-71.ec2.internal:20888/proxy/application_1684655349030_0001/
+2023-05-21 08:11:31,823 INFO mapreduce.Job: Running job: job_1684655349030_0001
+2023-05-21 08:11:39,984 INFO mapreduce.Job: Job job_1684655349030_0001 running in uber mode : false
+2023-05-21 08:11:39,985 INFO mapreduce.Job:  map 0% reduce 0%
+2023-05-21 08:11:47,095 INFO mapreduce.Job:  map 8% reduce 0%
+2023-05-21 08:11:48,098 INFO mapreduce.Job:  map 17% reduce 0%
+2023-05-21 08:11:50,114 INFO mapreduce.Job:  map 25% reduce 0%
+2023-05-21 08:11:52,123 INFO mapreduce.Job:  map 42% reduce 0%
+2023-05-21 08:11:53,129 INFO mapreduce.Job:  map 92% reduce 0%
+2023-05-21 08:11:54,133 INFO mapreduce.Job:  map 100% reduce 0%
+2023-05-21 08:11:58,150 INFO mapreduce.Job:  map 100% reduce 60%
+2023-05-21 08:11:59,154 INFO mapreduce.Job:  map 100% reduce 80%
+2023-05-21 08:12:00,158 INFO mapreduce.Job:  map 100% reduce 100%
+2023-05-21 08:12:00,164 INFO mapreduce.Job: Job job_1684655349030_0001 completed successfully
+2023-05-21 08:12:00,257 INFO mapreduce.Job: Counters: 56
+        File System Counters
+                FILE: Number of bytes read=4561277
+                FILE: Number of bytes written=16828865
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=301133019
+                HDFS: Number of bytes written=5292088
+                HDFS: Number of read operations=61
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=10
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters 
+                Killed map tasks=1
+                Launched map tasks=12
+                Launched reduce tasks=5
+                Data-local map tasks=4
+                Rack-local map tasks=8
+                Total time spent by all maps in occupied slots (ms)=9208608
+                Total time spent by all reduces in occupied slots (ms)=4524480
+                Total time spent by all map tasks (ms)=95923
+                Total time spent by all reduce tasks (ms)=23565
+                Total vcore-milliseconds taken by all map tasks=95923
+                Total vcore-milliseconds taken by all reduce tasks=23565
+                Total megabyte-milliseconds taken by all map tasks=294675456
+                Total megabyte-milliseconds taken by all reduce tasks=144783360
+        Map-Reduce Framework
+                Map input records=568455
+                Map output records=568454
+                Map output bytes=10696335
+                Map output materialized bytes=7282391
+                Input split bytes=1404
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=256059
+                Reduce shuffle bytes=7282391
+                Reduce input records=568454
+                Reduce output records=256059
+                Spilled Records=1136908
+                Shuffled Maps =60
+                Failed Shuffles=0
+                Merged Map outputs=60
+                GC time elapsed (ms)=2189
+                CPU time spent (ms)=45610
+                Physical memory (bytes) snapshot=7903977472
+                Virtual memory (bytes) snapshot=88534212608
+                Total committed heap usage (bytes)=7219445760
+                Peak Map Physical memory (bytes)=579084288
+                Peak Map Virtual memory (bytes)=4440080384
+                Peak Reduce Physical memory (bytes)=335908864
+                Peak Reduce Virtual memory (bytes)=7107919872
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters 
+                Bytes Read=301131615
+        File Output Format Counters 
+                Bytes Written=5292088
+2023-05-21 08:12:00,257 INFO streaming.StreamJob: Output directory: /output/job2output
+
+
+
+
+****************************************************************************************************
+
+[hadoop@ip-172-31-22-71 ~]$ hdfs dfs -head /output/job2output/part-00000
+#oc-R1I879FCTH83GM      1.0
+#oc-R1OGEG6X7R7642      1.0
+#oc-R2CQETFE39ZTAT      1.0
+#oc-R2E9Y1E0G5IIB1      1.0
+#oc-R2M3KDKLRT9W0L      1.0
+#oc-R2T2GL1NAC2UMH      1.0
+#oc-R3BDHOTWFGS67B      1.0
+#oc-R3JW8TXVFCRK3B      1.0
+#oc-R3OZAR95DCO73U      1.0
+#oc-R67F980SN7SDY       1.0
+#oc-RGL0JHVXBFQFA       1.0
+#oc-RHAJQCQUG9JVW       1.0
+A1000WA98BFTQB  1.0
+A1001WMV1CL0XH  1.0
+A100TCEB7KB4B   1.0
+A1016MYYF5QSTY  1.0
+A102NBEATBBBO4  1.0
+A102TVNP1REWPB  1.0
+A102W3F8FJIF2Y  1.0
+A103MIN5CRUEDT  1.0
+A103T0YQTG416Z  1.0
+A1048HOW441Z1L  1.0
+A104I3845HRX3I  1.0
+A104NBZOSZODEQ  1.0
+A10599XTR0LTV0  1.0
+A105I12QAV50E8  1.0
+A105R9D233F6TO  1.0
+A1068D21DZ53J9  1.0
+A106NMYQPS5VO2  1.0
+A106X6HMD3NE76  1.0
+A108UKS54FI2L   1.0
+A10943KV975FAV  1.0
+A10980YOVI2275  1.0
+A10993ETJGGYCS  1.0
+A109NF17JLLWFA  1.0
+A109WE4H6C9O2X  1.0
+A10A7GV4D5A11V  1.0
+A10A8RN22T6J2R  1.0
+A10B1PARR8QTXJ  1.0
+A10BR9ISEW4LCX  1.0
+A10CYWILY2NEZM  1.0
+A10D847GNWSZP8  1.0
+A10DAMI04QFCBP  1.0
+A10DLKABMEJVGL  1.0
+A10DN1MXRBVJ98  1.0
+A10DXDSVOVBHRQ  1.0
+A10E3V94MQ9IVU  1.0
+A10E5UCGTMSQ70  1.0
+A10EKO1CLMXTTB  1.0
+A10EM30P8O0VO8  1.0
+A10ESQVCJMGJC6  1.0
