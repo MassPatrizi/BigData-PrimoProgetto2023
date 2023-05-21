@@ -1,0 +1,419 @@
+alessandro@MacBook-Air-di-Alessandro-2 ~ % time /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Hive/run.sh
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/homebrew/Cellar/hadoop/3.3.4/libexec/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar!/hive-log4j2.properties Async: true
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.hadoop.hive.common.StringInternUtils (file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar) to field java.net.URI.string
+WARNING: Please consider reporting this to the maintainers of org.apache.hadoop.hive.common.StringInternUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+OK
+Time taken: 2.385 seconds
+OK
+Time taken: 0.323 seconds
+Loading data to table default.reviews
+OK
+Time taken: 0.616 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = alessandro_20230521131512_f8571bfb-7dca-4920-be87-71d18a0c2016
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 2
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:15:14,408 Stage-1 map = 0%,  reduce = 0%
+2023-05-21 13:15:15,421 Stage-1 map = 100%,  reduce = 0%
+2023-05-21 13:15:16,432 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1852547320_0001
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:15:17,700 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1340840155_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 1170404841 HDFS Write: 1202582156 SUCCESS
+Stage-Stage-2:  HDFS Read: 601307462 HDFS Write: 601291078 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+A161DK06JJMCYF  1.0333333333333334
+#oc-R1XE00JQIJIPUH      1.0
+#oc-R1UHB5HAUGHE85      1.0
+AZZY649VYAHQS   1.0
+#oc-R24NJ9EAUPQTE2      1.0
+#oc-R1KIN7Z6UZUU8Q      1.0
+#oc-R19QDOY2PXS15       1.0
+#oc-R1I879FCTH83GM      1.0
+#oc-R2GTLUGFBPA5AP      1.0
+AZZRFMUO60L7J   1.0
+Time taken: 5.476 seconds, Fetched: 10 row(s)
+  21.01s user 1.27s system 175% cpu 12.693 total
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   *****
+ ***  ***
+***    ***
+      ***
+    *** 
+   ***
+  ***
+ *********
+ *********
+
+******************* DUPLICATED OUTPUT *******************
+
+alessandro@MacBook-Air-di-Alessandro-2 ~ % time /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Hive/run.sh
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/homebrew/Cellar/hadoop/3.3.4/libexec/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar!/hive-log4j2.properties Async: true
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.hadoop.hive.common.StringInternUtils (file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar) to field java.net.URI.string
+WARNING: Please consider reporting this to the maintainers of org.apache.hadoop.hive.common.StringInternUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+OK
+Time taken: 2.222 seconds
+OK
+Time taken: 0.259 seconds
+Loading data to table default.reviews
+OK
+Time taken: 0.957 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = alessandro_20230521132706_2df370c9-a42c-4e64-b25d-58f70d327334
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 3
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:27:08,349 Stage-1 map = 0%,  reduce = 0%
+2023-05-21 13:27:09,357 Stage-1 map = 100%,  reduce = 0%
+2023-05-21 13:27:11,380 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1933088944_0001
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:27:12,649 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1703935361_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 3206011768 HDFS Write: 3600922932 SUCCESS
+Stage-Stage-2:  HDFS Read: 1200340412 HDFS Write: 1200307644 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+A161DK06JJMCYF  1.0333333333333334
+#oc-R2GTLUGFBPA5AP      1.0
+#oc-R2HV741PDFL75Q      1.0
+AZZU1VEO8KUXH   1.0
+#oc-R1XK2SYVVK4FZA      1.0
+#oc-R2KYB1AMCHLOG3      1.0
+#oc-R1OGEG6X7R7642      1.0
+#oc-R2CQETFE39ZTAT      1.0
+#oc-R2HXSXDP1HIXZP      1.0
+AZZUQYE2C1LNI   1.0
+Time taken: 6.548 seconds, Fetched: 10 row(s)
+  23.57s user 1.65s system 186% cpu 13.521 total
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********
+**********
+***
+***
+*********
+       ***
+        **
+       ***
+*********
+*********
+
+******************* QUINTUPLED OUTPUT *******************
+
+alessandro@MacBook-Air-di-Alessandro-2 ~ % time /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Hive/run.sh
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/homebrew/Cellar/hadoop/3.3.4/libexec/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar!/hive-log4j2.properties Async: true
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.hadoop.hive.common.StringInternUtils (file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar) to field java.net.URI.string
+WARNING: Please consider reporting this to the maintainers of org.apache.hadoop.hive.common.StringInternUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+OK
+Time taken: 2.204 seconds
+OK
+Time taken: 0.262 seconds
+Loading data to table default.reviews
+OK
+Time taken: 1.815 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = alessandro_20230521132811_100038da-4c91-421d-9b39-e058f5a261c8
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 6
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:28:14,159 Stage-1 map = 0%,  reduce = 0%
+2023-05-21 13:28:15,168 Stage-1 map = 100%,  reduce = 0%
+2023-05-21 13:28:20,204 Stage-1 map = 100%,  reduce = 50%
+2023-05-21 13:28:21,216 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1919716828_0001
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:28:22,493 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1720131588_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 14529660947 HDFS Write: 18004612860 SUCCESS
+Stage-Stage-2:  HDFS Read: 3000858922 HDFS Write: 3000768810 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+A161DK06JJMCYF  1.0333333333333334
+#oc-R3BDHOTWFGS67B      1.0
+#oc-RHAJQCQUG9JVW       1.0
+AZZU1VEO8KUXH   1.0
+A1001L6GILDZB5  1.0
+A100454KHKL9F4  1.0
+#oc-R19QDOY2PXS15       1.0
+#oc-R24NJ9EAUPQTE2      1.0
+A100DQHSKU9TVQ  1.0
+AZZA4Q0JACD5U   1.0
+Time taken: 10.572 seconds, Fetched: 10 row(s)
+  28.97s user 2.43s system 170% cpu 18.421 total
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***       ****
+***    ****  ****
+***   ***      ***
+***   ***      ***
+***   ***      ***
+***   ***      ***
+***    ****  ****
+***       ****
+
+
+
+******************* DECUPLED OUTPUT *******************
+
+alessandro@MacBook-Air-di-Alessandro-2 ~ % time /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Hive/run.sh
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/homebrew/Cellar/hadoop/3.3.4/libexec/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar!/hive-log4j2.properties Async: true
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.hadoop.hive.common.StringInternUtils (file:/Users/alessandro/Development/Tools/apache-hive-2.3.9-bin/lib/hive-common-2.3.9.jar) to field java.net.URI.string
+WARNING: Please consider reporting this to the maintainers of org.apache.hadoop.hive.common.StringInternUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+OK
+Time taken: 2.265 seconds
+OK
+Time taken: 0.266 seconds
+Loading data to table default.reviews
+OK
+Time taken: 3.311 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = alessandro_20230521132906_f4e6c6b3-bb59-4a3b-b798-91dcc0b252e8
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 12
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:29:09,149 Stage-1 map = 0%,  reduce = 0%
+2023-05-21 13:29:10,156 Stage-1 map = 100%,  reduce = 0%
+2023-05-21 13:29:11,162 Stage-1 map = 17%,  reduce = 0%
+2023-05-21 13:29:12,170 Stage-1 map = 100%,  reduce = 0%
+2023-05-21 13:29:16,206 Stage-1 map = 58%,  reduce = 0%
+2023-05-21 13:29:17,212 Stage-1 map = 67%,  reduce = 0%
+2023-05-21 13:29:18,219 Stage-1 map = 75%,  reduce = 0%
+2023-05-21 13:29:19,226 Stage-1 map = 83%,  reduce = 0%
+2023-05-21 13:29:20,232 Stage-1 map = 100%,  reduce = 8%
+2023-05-21 13:29:21,237 Stage-1 map = 100%,  reduce = 42%
+2023-05-21 13:29:22,245 Stage-1 map = 100%,  reduce = 75%
+2023-05-21 13:29:23,253 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1275663326_0001
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-05-21 13:29:24,524 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local276180408_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 56728445454 HDFS Write: 72018449040 SUCCESS
+Stage-Stage-2:  HDFS Read: 6001717644 HDFS Write: 6001537420 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+A161DK06JJMCYF  1.0333333333333334
+A100OV7P110FUS  1.0
+A100OABQM9FN8O  1.0
+AZXYMD0WNZVLE   1.0
+A100IC7JRCQDUD  1.0
+A1012NTSDXB65I  1.0
+#oc-R1UHB5HAUGHE85      1.0
+A100DQHSKU9TVQ  1.0
+A100IVLI4AFIY3  1.0
+AZZRFMUO60L7J   1.0
+Time taken: 17.776 seconds, Fetched: 10 row(s)
+  42.59s user 3.77s system 169% cpu 27.313 total
