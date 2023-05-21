@@ -1,0 +1,245 @@
+[hadoop@ip-172-31-29-33 ~]$ hive --f ~/Hive/job2cluster.hql
+Hive Session ID = 7e7068a5-976d-4f53-8d9a-12c91af26e99
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j2.properties Async: false
+OK
+Time taken: 0.976 seconds
+OK
+Time taken: 0.209 seconds
+Loading data to table default.reviews
+OK
+Time taken: 0.86 seconds
+Query ID = hadoop_20230521163121_8da3fcd3-6e37-4ad4-a6e8-8a7e546f6e29
+Total jobs = 1
+Launching Job 1 out of 1
+Status: Running (Executing on YARN cluster with App id application_1684684361199_0013)
+
+----------------------------------------------------------------------------------------------
+        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+----------------------------------------------------------------------------------------------
+Map 1 .......... container     SUCCEEDED     17         17        0        0       0       0  
+Reducer 2 ...... container     SUCCEEDED      2          2        0        0       0       0  
+Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0  
+----------------------------------------------------------------------------------------------
+VERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 14.54 s    
+----------------------------------------------------------------------------------------------
+OK
+A161DK06JJMCYF  1.0333333333333334
+AZZV9PDNMCOZW   1.0
+#oc-R2KYB1AMCHLOG3      1.0
+#oc-R1UHB5HAUGHE85      1.0
+#oc-R163CP16SRRI50      1.0
+#oc-R1KIN7Z6UZUU8Q      1.0
+#oc-R2GTLUGFBPA5AP      1.0
+AZZY649VYAHQS   1.0
+#oc-R1XK2SYVVK4FZA      1.0
+#oc-R24NJ9EAUPQTE2      1.0
+Time taken: 25.084 seconds, Fetched: 10 row(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   *****
+ ***  ***
+***    ***
+      ***
+    *** 
+   ***
+  ***
+ *********
+ *********
+
+******************* DUPLICATED OUTPUT *******************
+
+[hadoop@ip-172-31-29-33 ~]$ hive --f ~/Hive/job2cluster.hql
+Hive Session ID = 6f2b6dd2-7dbf-44af-bcd5-f30a02d0fef3
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j2.properties Async: false
+OK
+Time taken: 1.022 seconds
+OK
+Time taken: 0.196 seconds
+Loading data to table default.reviews
+OK
+Time taken: 1.245 seconds
+Query ID = hadoop_20230521164010_e9ea29d6-5e43-4ce6-8a8d-c89044e27d64
+Total jobs = 1
+Launching Job 1 out of 1
+Status: Running (Executing on YARN cluster with App id application_1684684361199_0015)
+
+----------------------------------------------------------------------------------------------
+        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+----------------------------------------------------------------------------------------------
+Map 1 .......... container     SUCCEEDED     17         17        0        0       0       0  
+Reducer 2 ...... container     SUCCEEDED      2          2        0        0       0       0  
+Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0  
+----------------------------------------------------------------------------------------------
+VERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 16.81 s    
+----------------------------------------------------------------------------------------------
+OK
+A161DK06JJMCYF  1.0333333333333334
+AZZV9PDNMCOZW   1.0
+#oc-R2KYB1AMCHLOG3      1.0
+#oc-R1UHB5HAUGHE85      1.0
+#oc-R163CP16SRRI50      1.0
+#oc-R1KIN7Z6UZUU8Q      1.0
+#oc-R2GTLUGFBPA5AP      1.0
+AZZY649VYAHQS   1.0
+#oc-R1XK2SYVVK4FZA      1.0
+#oc-R24NJ9EAUPQTE2      1.0
+Time taken: 26.345 seconds, Fetched: 10 row(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********
+**********
+***
+***
+*********
+       ***
+        **
+       ***
+*********
+*********
+
+******************* QUINTUPLED OUTPUT *******************
+
+[hadoop@ip-172-31-29-33 ~]$ hive --f ~/Hive/job2cluster.hql
+Hive Session ID = 027577ee-7a72-48f6-8d69-fac69d522c73
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j2.properties Async: false
+OK
+Time taken: 0.936 seconds
+OK
+Time taken: 0.222 seconds
+Loading data to table default.reviews
+OK
+Time taken: 3.289 seconds
+Query ID = hadoop_20230521164518_a20f57e0-9762-4fdd-9213-88668250a7fd
+Total jobs = 1
+Launching Job 1 out of 1
+Status: Running (Executing on YARN cluster with App id application_1684684361199_0016)
+
+----------------------------------------------------------------------------------------------
+        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+----------------------------------------------------------------------------------------------
+Map 1 .......... container     SUCCEEDED     17         17        0        0       0       0  
+Reducer 2 ...... container     SUCCEEDED      2          2        0        0       0       0  
+Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0  
+----------------------------------------------------------------------------------------------
+VERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 17.83 s    
+----------------------------------------------------------------------------------------------
+OK
+A161DK06JJMCYF  1.0333333333333334
+AZZV9PDNMCOZW   1.0
+#oc-R2KYB1AMCHLOG3      1.0
+#oc-R1UHB5HAUGHE85      1.0
+#oc-R163CP16SRRI50      1.0
+#oc-R1KIN7Z6UZUU8Q      1.0
+#oc-R2GTLUGFBPA5AP      1.0
+AZZY649VYAHQS   1.0
+#oc-R1XK2SYVVK4FZA      1.0
+#oc-R24NJ9EAUPQTE2      1.0
+Time taken: 20.944 seconds, Fetched: 10 row(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***       ****
+***    ****  ****
+***   ***      ***
+***   ***      ***
+***   ***      ***
+***   ***      ***
+***    ****  ****
+***       ****
+
+
+
+******************* DECUPLED OUTPUT *******************
+
+[hadoop@ip-172-31-29-33 ~]$ hive --f ~/Hive/job2cluster.hql
+Hive Session ID = 756f33fb-ffc6-45d0-ba37-ee876c421b63
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j2.properties Async: false
+OK
+Time taken: 0.998 seconds
+OK
+Time taken: 0.202 seconds
+Loading data to table default.reviews
+OK
+Time taken: 5.77 seconds
+Query ID = hadoop_20230521165205_3d172728-622a-4b4d-b6e3-059d87c87fdf
+Total jobs = 1
+Launching Job 1 out of 1
+Status: Running (Executing on YARN cluster with App id application_1684684361199_0017)
+
+----------------------------------------------------------------------------------------------
+        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+----------------------------------------------------------------------------------------------
+Map 1 .......... container     SUCCEEDED     23         23        0        0       0       0  
+Reducer 2 ...... container     SUCCEEDED      2          2        0        0       0       0  
+Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0  
+----------------------------------------------------------------------------------------------
+VERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 18.29 s    
+----------------------------------------------------------------------------------------------
+OK
+A161DK06JJMCYF  1.0333333333333334
+AZZV9PDNMCOZW   1.0
+#oc-R2KYB1AMCHLOG3      1.0
+#oc-R1UHB5HAUGHE85      1.0
+#oc-R163CP16SRRI50      1.0
+#oc-R1KIN7Z6UZUU8Q      1.0
+#oc-R2GTLUGFBPA5AP      1.0
+AZZY649VYAHQS   1.0
+#oc-R1XK2SYVVK4FZA      1.0
+#oc-R24NJ9EAUPQTE2      1.0
+Time taken: 21.321 seconds, Fetched: 10 row(s)
+
+
+
+
+
