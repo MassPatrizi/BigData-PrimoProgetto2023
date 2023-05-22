@@ -10,7 +10,7 @@ start_time = time.time()
 
 
 # Scommentare il dataset che si vuole utilizzare
-input_filepath = "file:///Users/Massimiliano/Desktop/ReviewsCleaned.csv"
+input_filepath = "file:///Users/Massimiliano/Desktop/Datasets/ReviewsCleaned.csv"
 #input_filepath = "file:///Users/Massimiliano/Desktop/duplicated_output.csv"
 #input_filepath = "file:///Users/Massimiliano/Desktop/quintupled_output.csv"
 #input_filepath = "file:///Users/Massimiliano/Desktop/decupled_output.csv"
@@ -55,7 +55,9 @@ word_counts = split_text_rdd.flatMap(lambda x: [((x[0], x[1], x[2]), word) for w
     .flatMap(lambda x: sorted(x[1], key=lambda y: y[3][1], reverse=True)[:5]) \
     .sortBy(lambda x: (x[0], x[2]), ascending=False)
 
-df = word_counts.toDF()
+
+# Creazione del DataFrame e stampa
+df = word_counts.toDF(["year", "productid", "reviews count", "(word, count)"])
 df.show(100)
 
 # Tempo al termine dell'esecuzione

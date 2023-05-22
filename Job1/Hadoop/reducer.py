@@ -61,7 +61,7 @@ for line in sys.stdin:
         current_product_counts[ProductId] = {}
         current_product_reviews[ProductId] = 0
 
-    # Aggiorgna la coppia (word, count) per il prodotto corrente
+    # Aggiorna la coppia (word, count) per il prodotto corrente
     current_product_reviews[ProductId] += 1
     product_counts = current_product_counts[ProductId]
     for word in Text.split():
