@@ -6,7 +6,7 @@ from pyspark.sql.window import Window
 spark = SparkSession.builder.appName("ReviewsAnalysis").getOrCreate()
 
 # Carica i dati
-reviews = spark.read.format("csv").option("header", "true").option("delimiter", ";").load("file:///Users/Massimiliano/Desktop/ReviewsCleaned.csv")
+reviews = spark.read.format("csv").option("header", "true").option("delimiter", ";").load("file:///Users/Massimiliano/Desktop/Datasets/ReviewsCleaned.csv")
 
 # Generazione dei risultati per ciascun anno
 reviews_by_year = reviews.select(
@@ -33,7 +33,7 @@ word_counts = reviews_by_year.select(
 window_spec_word = Window.partitionBy("year", "productid").orderBy(col("word_count").desc())
 top_words = word_counts.withColumn("rank", row_number().over(window_spec_word)).where(col("rank") <= 5)
 
-final_results = top_10_products.join(top_words, ["year", "productid"]).orderBy("year", col("review_count").desc(), "productid", col("word_count").desc()).drop("rank")
+final_results = top_10_products.join(top_words, ["year", "product_id"]).orderBy("year", col("review_count").desc(), "productid", col("word_count").desc()).drop("rank")
 
 # Stampa i risultati (prime 20 righe)
 final_results.show()

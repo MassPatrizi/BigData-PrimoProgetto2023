@@ -87,6 +87,7 @@ max_rows_per_ProductId = 5  # Massimo numero di righe per uno stesso ProductId
 max_products_per_year = 10  # Massimo numero di ProductId per uno stesso anno
 products_per_year = 0
 
+print('year\tproduct_id\treview_count\tword\tword_count\n')
 for year, ProductId, word, count, reviews in output_data_sorted:
     if year != previous_year:
         if previous_year is not None:
