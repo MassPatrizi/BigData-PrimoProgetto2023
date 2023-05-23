@@ -1,4 +1,4 @@
-# NON ESEGUIRE, COPIARE E INCOLLARE SUL TERMINALE DOPO AVER CREATO IL CLUSTER
+# NON ESEGUIRE IL FILE, COPIARE E INCOLLARE SUL TERMINALE DOPO AVER CREATO IL CLUSTER
 
 # copy the project folder
 scp -i ~/.ssh/pem/sajobigdatakeys.pem -r /Users/alessandro/Development/BigData/BigData-PrimoProgetto2023/Job2/Hadoop hadoop@ec2-34-229-216-158.compute-1.amazonaws.com:~

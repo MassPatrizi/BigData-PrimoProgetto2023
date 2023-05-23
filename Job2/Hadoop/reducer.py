@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 
-# TO-DO
-# Devo ottenere una tabella ordinata con userId, apprezzamento
-# L'apprezzamento è la somma dell'utilità di tutte le recensioni eseguite, diviso il numero di recensioni.
-# L'utilità è il rapporto di helpfullnessNumerator e Denominator di una recensione. 
-
 """reducer.py"""
 import sys
 
