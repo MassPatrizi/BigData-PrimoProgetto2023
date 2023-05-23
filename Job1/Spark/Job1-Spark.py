@@ -53,11 +53,11 @@ word_counts = split_text_rdd.flatMap(lambda x: [((x[0], x[1], x[2]), word) for w
     .map(lambda x: (x[0][0][0], x[0][0][1], x[0][0][2], (x[0][1], x[1]))) \
     .groupBy(lambda x: (x[1], x[0])) \
     .flatMap(lambda x: sorted(x[1], key=lambda y: y[3][1], reverse=True)[:5]) \
-    .sortBy(lambda x: (x[0], x[2]), ascending=False)
+    .sortBy(lambda x: (x[0], -x[2]), ascending=True)
 
 
 # Creazione del DataFrame e stampa
-df = word_counts.toDF(["year", "productid", "reviews count", "(word, count)"])
+df = word_counts.toDF(["year", "product_id", "review_count", "(word, count)"])
 df.show(100)
 
 # Tempo al termine dell'esecuzione
